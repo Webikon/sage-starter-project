@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ruleset name="Webikon">
+  <description>Webikon Coding Standards</description>
+
+  <!-- Add all third-party plugins, which don't apply these standards -->
+  <exclude-pattern>acf-codifier</exclude-pattern>
+  <exclude-pattern>CPT_Core</exclude-pattern>
+  <exclude-pattern>Taxonomy_Core</exclude-pattern>
+  <exclude-pattern>wp-migrate-db-pro-compatibility.php</exclude-pattern>
+  <exclude-pattern>wp-remove-customizer.php</exclude-pattern>
+
+  <!-- Show colors in console -->
+  <arg value="-colors"/>
+
+  <!-- Show sniff codes in all reports -->
+  <arg value="s"/>
+
+  <!-- Use PSR-2 as a base -->
+  <rule ref="PSR2"/>
+
+</ruleset>
