@@ -12,4 +12,6 @@ Text Domain: wbkn-wp-security
 */
 
 /** Remove theme editor from WP Admin */
-define('DISALLOW_FILE_EDIT', true);
+if (!defined('DISALLOW_FILE_EDIT')) {
+    define('DISALLOW_FILE_EDIT', true);
+}
