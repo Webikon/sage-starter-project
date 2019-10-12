@@ -5,6 +5,8 @@
 
 Sage is a WordPress starter theme with a modern development workflow.
 
+Customized and improved by [Webikon](https://webikon.sk).
+
 ## Features
 
 * Sass for stylesheets
@@ -13,7 +15,8 @@ Sage is a WordPress starter theme with a modern development workflow.
 * [Browsersync](http://www.browsersync.io/) for synchronized browser testing
 * [Blade](https://laravel.com/docs/5.6/blade) as a templating engine
 * [Controller](https://github.com/soberwp/controller) for passing data to Blade templates
-* CSS framework (optional): [Bootstrap 4](https://getbootstrap.com/), [Bulma](https://bulma.io/), [Foundation](https://foundation.zurb.com/), [Tachyons](http://tachyons.io/), [Tailwind](https://tailwindcss.com/)
+* CSS framework: [Bootstrap 4](https://getbootstrap.com/)
+* Linters (ESLint, SassLint, PHPCS, .editorconfig)
 
 See a working example at [roots-example-project.com](https://roots-example-project.com/).
 
@@ -29,20 +32,9 @@ Make sure all dependencies have been installed before moving on:
 
 ## Theme installation
 
-Install Sage using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
-
-```shell
-# @ app/themes/ or wp-content/themes/
-$ composer create-project roots/sage your-theme-name
-```
-
-To install the latest development version of Sage, add `dev-master` to the end of the command:
-
-```shell
-$ composer create-project roots/sage your-theme-name dev-master
-```
-
-During theme installation you will have options to update `style.css` theme headers, select a CSS framework, and configure Browsersync.
+- Run `composer install`.
+- Run `npm install`
+- Replace all occurences of `'sage'` and `sage-theme`.
 
 ## Theme structure
 
@@ -83,16 +75,16 @@ Edit `app/setup.php` to enable or disable theme features, setup navigation menus
 
 ## Theme development
 
-* Run `yarn` from the theme directory to install dependencies
+* Run `npm install` from the theme directory to install dependencies
 * Update `resources/assets/config.json` settings:
   * `devUrl` should reflect your local development hostname
   * `publicPath` should reflect your WordPress folder structure (`/wp-content/themes/sage` for non-[Bedrock](https://roots.io/bedrock/) installs)
 
 ### Build commands
 
-* `yarn start` — Compile assets when file changes are made, start Browsersync session
-* `yarn build` — Compile and optimize the files in your assets directory
-* `yarn build:production` — Compile assets for production
+* `npm run start` — Compile assets when file changes are made, start Browsersync session
+* `npm run build` — Compile and optimize the files in your assets directory
+* `npm run build:production` — Compile assets for production
 
 ## Documentation
 
